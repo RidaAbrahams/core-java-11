@@ -23,6 +23,21 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/za/co/rida/examples/objects/CalendarTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/za/co/rida/examples/objects/LocalDateDemo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/za/co/rida/examples/objects/ObjectReferenceDemo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
       </map>
     </option>
   </component>

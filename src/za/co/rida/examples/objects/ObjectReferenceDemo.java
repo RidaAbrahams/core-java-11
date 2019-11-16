@@ -1,4 +1,4 @@
-package za.co.rida.examples;
+package za.co.rida.examples.objects;
 
 import java.util.Date;
 
