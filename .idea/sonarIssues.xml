@@ -3,7 +3,22 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="$PROJECT_DIR$/../StringReplace/src/za/co/rida/boundary/Processor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../StringReplace/src/za/co/rida/entity/Transaction.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/za/co/rida/examples/Hello.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/za/co/rida/examples/ObjectReferenceDemo.java">
           <value>
             <set />
           </value>
