@@ -3,6 +3,11 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../StringReplace/src/za/co/rida/boundary/Processor.java">
           <value>
             <set />
@@ -44,6 +49,76 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/za/co/rida/examples/ownclasses/EmployeeTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../interfaces-demo/customer-interfaces/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../messaging-samples/messaging-parent/billing/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../messaging-samples/messaging-parent/billing/src/main/java/za/co/rida/messaging/audit/entity/SystemAudit.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../messaging-samples/messaging-parent/billing/src/main/java/za/co/rida/messaging/billing/OrdersConsumer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../messaging-samples/messaging-parent/billing/src/main/java/za/co/rida/messaging/billing/boundary/OrderMessageConsumer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../messaging-samples/messaging-parent/billing/src/main/java/za/co/rida/messaging/billing/boundary/OrdersConsumer.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../messaging-samples/messaging-parent/billing/src/main/java/za/co/rida/messaging/billing/control/BillService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../messaging-samples/messaging-parent/billing/src/main/java/za/co/rida/messaging/billing/entity/Bill.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../messaging-samples/messaging-parent/orders/pom.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../messaging-samples/messaging-parent/orders/src/main/java/za/co/rida/messaging/orders/boundary/OrdersResource.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../messaging-samples/messaging-parent/orders/src/main/java/za/co/rida/messaging/orders/control/OrdersService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../messaging-samples/messaging-parent/orders/src/main/java/za/co/rida/messaging/orders/entity/PurchaseOrderMessage.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../messaging-samples/messaging-parent/orders/src/main/java/za/co/rida/messaging/platform/JAXRSApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../messaging-samples/messaging-parent/pom.xml">
           <value>
             <set />
           </value>

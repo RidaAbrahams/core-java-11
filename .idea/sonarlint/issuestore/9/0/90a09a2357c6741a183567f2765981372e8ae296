@@ -1,0 +1,29 @@
+
+dsquid:S1854C"ARemove this useless assignment to local variable "birthDateSafe".(ûã­¾ûÿÿÿÿ8ÏªÕÓç-
+Dsquid:S1481^"&Remove this unused "s" local variable.(­ë€»8×ëñÒç-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(¨¶ÑÍşÿÿÿÿ8â¶–ç-
+\squid:S1854*"9Remove this useless assignment to local variable "harry".(äæô‰øÿÿÿÿ8ì ¾–ç-
+Usquid:S1481C"2Remove this unused "birthDateSafe" local variable.(ûã­¾ûÿÿÿÿ8ÏªÕÓç-
+qsquid:UnusedPrivateMethodR"ERemove this unused private "nullPointerNotThrownNullRejected" method.(ä¤ª‡8ıˆ•Óç-
+[
+squid:S106<"9Replace this use of System.out or System.err by a logger.(ÔëÌÙÿÿÿÿÿ8‰ŠÀÓç-
+bsquid:UnusedPrivateMethod\"6Remove this unused private "nullPointerThrown" method.(­§İ8¸¹‘Óç-
+nsquid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(‹¢¹˜şÿÿÿÿ8–Ş©–ç-
+\
+squid:S106’"9Replace this use of System.out or System.err by a logger.(æµ¢…úÿÿÿÿ8ÕùùÓç-
+Hsquid:S1481 "*Remove this unused "james" local variable.(‚‹õß8–Ş©–ç-
+isquid:CommentedOutCodeLine4"<This block of commented-out lines of code should be removed.(¸õÓ8ıˆ•Óç-
+Wsquid:S1854 "9Remove this useless assignment to local variable "james".(‚‹õß8–Ş©–ç-
+Ssquid:S1854^"5Remove this useless assignment to local variable "s".(­ë€»8×ëñÒç-
+V
+squid:S106?"9Replace this use of System.out or System.err by a logger.(›î®8ôÂÉÓç-
+U
+squid:S106Y"9Replace this use of System.out or System.err by a logger.(ŠŠ…8ÄÅşÒç-
+dsquid:S2259^"FA "NullPointerException" could be thrown; "birthday" is nullable here.(­ë€»8×ëñÒç-
+Msquid:S1481*"*Remove this unused "harry" local variable.(äæô‰øÿÿÿÿ8¶ê¾–ç-
+V
+squid:S106D"9Replace this use of System.out or System.err by a logger.(ğ‡’û8ÿÕÓç-
+U
+squid:S106T"9Replace this use of System.out or System.err by a logger.(ŠŠ…8ÑÒ‹Óç-
+nsquid:CommentedOutCodeLine."<This block of commented-out lines of code should be removed.(¢ûÅ®ûÿÿÿÿ8¸¹‘Óç-

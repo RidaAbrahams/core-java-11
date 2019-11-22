@@ -1,0 +1,7 @@
+
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(«®ÿÿÿÿÿ8·“ç-
+Ysquid:S1854"6Remove this useless assignment to local variable "s1".(úìŒøÿÿÿÿ8ĞÊ†“ç-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(åØ8·“ç-
+Jsquid:S1481"'Remove this unused "s1" local variable.(úìŒøÿÿÿÿ8ĞÊ†“ç-
