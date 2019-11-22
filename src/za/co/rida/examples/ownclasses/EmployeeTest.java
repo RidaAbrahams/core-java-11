@@ -1,5 +1,6 @@
 package za.co.rida.examples.ownclasses;
 
+import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.Objects;
@@ -76,6 +77,73 @@ public class EmployeeTest {
         Employee boss = new Employee("Boss Man", 60, 1980, 9, 25);
         rida.demoClassBasedAccessPriviliges(boss);
 
+        // Static fields
+        // When you define a field as static, there is only one such field per class.
+        // For nonstatic instance fields, each object has it's own copy of the instance field.
+        // In practice static variables are quite rare.
+        Employee safiya = new Employee("Safiya Abrahams", 75000, 2003, 1, 22);
+        safiya.setId();
+        System.out.println("Safiya's ID = " + safiya.getId());
+        Employee atheera = new Employee("Atheera Abrahams", 65000, 2005, 12, 2);
+        atheera.setId();
+        System.out.println("Atheera's ID = " + atheera.getId()); // see how the nextId field is accessible to both objects
+
+        // Static constants
+        // In practice static constants are more prevalent than static variables
+        // There is one copy of the constant per class
+        System.out.println(Employee.RIGHTS);
+
+        // Static methods
+        // These methods do not operate on objects, i.e. there is no implicit "this" parameter as there is
+        // with ojbects, e.g. this.getBirthDate
+        // Static methods cannot access instance fields because they don't operate on objects
+        // So a static method cannot access the this.birthDate instance variable for example
+        // They can, however, access static variables.
+        // It is recommended to use class names to invoke static methods, not objects.
+        // e.g. Don't use atheera.getCompanyName(), rather use the class, Employee.getCompanyName()
+        // Use static methods under 2 circumstances:
+        // 1. When a method doesn’t need to access the object state because all needed parameters are supplied as explicit parameters.
+        // 2. When a method only needs to access static fields of the class.
+        Employee.setCompanyName("Amazon");
+        System.out.println(Employee.getCompanyName());
+
+        // Factory methods
+        // Another common use for static methods can be found in classes such as LocalDate and NumberFormat
+        // where they use static factory methods that construct objects.
+        // The reasons for not using constructor instead are:
+        // You can’t give names to constructors. The constructor name is always the same as the class name.
+        // But we want two different names to get the currency instance and the percent instance.
+        // When you use a constructor, you can’t vary the type of the constructed object.
+        // But the factory methods actually return objects of the class DecimalFormat, a subclass that inherits from NumberFormat.
+        NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance();
+        NumberFormat percentFormatter = NumberFormat.getPercentInstance();
+        double x = 0.1;
+        System.out.println(currencyFormatter.format(x)); // prints R0.10
+        System.out.println(percentFormatter.format(x)); // prints 10%
+
+        // The main method of all classes is static and doesn't need any object.
+        // It executes once the program is loaded. Every class can have a main method.
+
+        // Method parameters
+        // Parameters can be passed to a method in two ways:
+        // 1. By value: i.e. the method gets the value that the caller provides.
+        // 2. By reference: i.e. the method gets the location of the variable that the caller provides.
+        // A method can modify the value in a variable passed by reference but not one passed by value.
+        // In Java, methods are always passed by value. ALWAYS!
+        // i.e. the method gets a COPY of all parameter values passed to it. That means that the method
+        // cannot modify the contents of any particular variables passed to it.
+        // below the value of the percent variable is still 10, even after the call to tripleValue().
+        // Let's see how this works for primitives. i.e. int, double, boolean, etc.
+        double percent = 10;
+        System.out.println("Value of percent before method call = " + percent);
+        tripleValue(percent);
+        System.out.println("Value of percent after  method call = " + percent);
+
+        // Object parameters work differently.
+        var harryHacker = new Employee("Harry Hacker", 55000, 1989, 10, 11);
+        tripleSalary(harryHacker);
+
+
 
     }
 
@@ -94,6 +162,22 @@ public class EmployeeTest {
         String s = birthday.toString();// NullPointerException
     }
 
+    public static void tripleValue(double x) {
+        x = 3 * x;
+        System.out.println("Value of x = " + x);
+    }
+
+    private static void tripleSalary(Employee x) {
+        // The argument 'x' is not passed by reference. Instead, 'x' is initialised with a copy of the value
+        // of the variable harryHacker, which is an object reference.
+        // Both the harryHacker and x object reference variables point to the same Employee instance.
+        // So the x.raiseSalary method call will obviously modify the value of the salary that the harryHacker object
+        // reference is pointing to since it is the same object.
+        // once the tripleSalary method ends, x is no longer in use, but the harryHacker object variable is still in use
+        // and will continue to point to the Employee object whose salary was tripled.
+        x.raiseSalary(200);
+    }
+
 
 }
 
@@ -102,6 +186,12 @@ class Employee {
     private double salary;
     private LocalDate hireDay;
     private Date birthDate;
+    private int id;
+    // There is a single static field for all Employee objects, even if there are no Employee objects the
+    // static field is present, since it belongs to the class, not to an individual object.
+    private static int nextId = 1;
+    public static final String RIGHTS = "You have the right to be paid on a specific date";
+    private static String companyName;
 
     public Employee(String name, double salary, int year, int month, int day) {
         // You can define an instance field as final. Such a field must be initialized when the object is constructed.
@@ -127,6 +217,7 @@ class Employee {
     public void raiseSalary(double byPercent) {
         double raise = salary * byPercent/100;
         salary += raise;
+        byPercent = 400;
     }
 
     public Date getBirthDate() {
@@ -144,6 +235,23 @@ class Employee {
     public void demoClassBasedAccessPriviliges(Employee other) {
         double bossesSalary = other.salary;
         System.out.println("I just saw my bosses salary and it is: " + bossesSalary);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public static String getCompanyName() {
+        return companyName;
+    }
+
+    public static void setCompanyName(String companyName) {
+        Employee.companyName = companyName;
+    }
+
+    public void setId() {
+        this.id = nextId;
+        nextId++;
     }
 
     @Override
